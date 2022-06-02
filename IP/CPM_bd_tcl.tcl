@@ -20,7 +20,7 @@ set script_folder [_tcl::get_script_folder]
 ################################################################
 # Check if script is running in correct Vivado version.
 ################################################################
-set scripts_vivado_version 2021.2
+set scripts_vivado_version 2022.1
 set current_vivado_version [version -short]
 
 if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
@@ -126,7 +126,7 @@ xilinx.com:ip:axi_bram_ctrl:4.1\
 xilinx.com:ip:emb_mem_gen:1.0\
 xilinx.com:ip:axi_noc:1.0\
 xilinx.com:ip:axis_ila:1.1\
-xilinx.com:ip:versal_cips:3.1\
+xilinx.com:ip:versal_cips:3.2\
 "
 
    set list_ips_missing ""
@@ -308,7 +308,7 @@ SID,RA14,RA13,RA12,RA11,RA10,RA9,RA8,RA7,RA6,RA5,RA4,RA3,RA2,RA1,RA0,BA3,BA2,BA}
  ] $axis_ila_BRAM
 
   # Create instance: versal_cips_0, and set properties
-  set versal_cips_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:versal_cips:3.1 versal_cips_0 ]
+  set versal_cips_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:versal_cips:3.2 versal_cips_0 ]
   set_property -dict [ list \
    CONFIG.CPM_CONFIG {\
      CPM_AXI_SLV_BRIDGE_BASE_ADDRR_H {0x00000006}\
